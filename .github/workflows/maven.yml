@@ -1,4 +1,4 @@
-name: MCNW_TEST
+name: Java CI
 
 on: [push]
 
@@ -14,6 +14,5 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: |
-        ./mvnw install
-        ./mvnw test
+
+      run: mvn install

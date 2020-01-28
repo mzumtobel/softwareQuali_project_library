@@ -57,7 +57,7 @@ public class RentingListResource {
         }
         RentingList result = rentingListRepository.save(rentingList);
         return ResponseEntity.created(new URI("/api/renting-lists/" + result.getId()))
-            .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.getId().toString()))
+            .headers(HeaderUtil.createEntityCreationAlert(applicationName, false, ENTITY_NAME, result.getId().toString()))
             .body(result);
     }
 
@@ -78,7 +78,7 @@ public class RentingListResource {
         }
         RentingList result = rentingListRepository.save(rentingList);
         return ResponseEntity.ok()
-            .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, rentingList.getId().toString()))
+            .headers(HeaderUtil.createEntityUpdateAlert(applicationName, false, ENTITY_NAME, rentingList.getId().toString()))
             .body(result);
     }
 
@@ -125,6 +125,6 @@ public class RentingListResource {
     public ResponseEntity<Void> deleteRentingList(@PathVariable Long id) {
         log.debug("REST request to delete RentingList : {}", id);
         rentingListRepository.deleteById(id);
-        return ResponseEntity.noContent().headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString())).build();
+        return ResponseEntity.noContent().headers(HeaderUtil.createEntityDeletionAlert(applicationName, false, ENTITY_NAME, id.toString())).build();
     }
 }

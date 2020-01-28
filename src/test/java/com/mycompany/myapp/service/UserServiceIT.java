@@ -1,6 +1,6 @@
 package com.mycompany.myapp.service;
 
-import com.mycompany.myapp.LibraryApp;
+import com.mycompany.myapp.SQuLcProjectApp;
 import com.mycompany.myapp.config.Constants;
 import com.mycompany.myapp.domain.User;
 import com.mycompany.myapp.repository.UserRepository;
@@ -32,7 +32,7 @@ import static org.mockito.Mockito.when;
 /**
  * Integration tests for {@link UserService}.
  */
-@SpringBootTest(classes = LibraryApp.class)
+@SpringBootTest(classes = SQuLcProjectApp.class)
 @Transactional
 public class UserServiceIT {
 

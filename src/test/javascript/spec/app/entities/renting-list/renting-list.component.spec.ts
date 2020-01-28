@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
 import { HttpHeaders, HttpResponse } from '@angular/common/http';
 
-import { LibraryTestModule } from '../../../test.module';
+import { SQuLcProjectTestModule } from '../../../test.module';
 import { RentingListComponent } from 'app/entities/renting-list/renting-list.component';
 import { RentingListService } from 'app/entities/renting-list/renting-list.service';
 import { RentingList } from 'app/shared/model/renting-list.model';
@@ -15,7 +15,7 @@ describe('Component Tests', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [LibraryTestModule],
+        imports: [SQuLcProjectTestModule],
         declarations: [RentingListComponent],
         providers: []
       })

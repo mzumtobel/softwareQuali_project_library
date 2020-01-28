@@ -55,7 +55,7 @@ public class LibraryAccountResource {
         }
         LibraryAccount result = libraryAccountRepository.save(libraryAccount);
         return ResponseEntity.created(new URI("/api/library-accounts/" + result.getId()))
-            .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.getId().toString()))
+            .headers(HeaderUtil.createEntityCreationAlert(applicationName, false, ENTITY_NAME, result.getId().toString()))
             .body(result);
     }
 
@@ -76,7 +76,7 @@ public class LibraryAccountResource {
         }
         LibraryAccount result = libraryAccountRepository.save(libraryAccount);
         return ResponseEntity.ok()
-            .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, libraryAccount.getId().toString()))
+            .headers(HeaderUtil.createEntityUpdateAlert(applicationName, false, ENTITY_NAME, libraryAccount.getId().toString()))
             .body(result);
     }
 
@@ -115,6 +115,6 @@ public class LibraryAccountResource {
     public ResponseEntity<Void> deleteLibraryAccount(@PathVariable Long id) {
         log.debug("REST request to delete LibraryAccount : {}", id);
         libraryAccountRepository.deleteById(id);
-        return ResponseEntity.noContent().headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString())).build();
+        return ResponseEntity.noContent().headers(HeaderUtil.createEntityDeletionAlert(applicationName, false, ENTITY_NAME, id.toString())).build();
     }
 }

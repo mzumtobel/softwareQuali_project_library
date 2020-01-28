@@ -1,6 +1,6 @@
 package com.mycompany.myapp.web.rest;
 
-import com.mycompany.myapp.LibraryApp;
+import com.mycompany.myapp.SQuLcProjectApp;
 import com.mycompany.myapp.domain.Author;
 import com.mycompany.myapp.repository.AuthorRepository;
 import com.mycompany.myapp.web.rest.errors.ExceptionTranslator;
@@ -30,7 +30,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Integration tests for the {@link AuthorResource} REST controller.
  */
-@SpringBootTest(classes = LibraryApp.class)
+@SpringBootTest(classes = SQuLcProjectApp.class)
 public class AuthorResourceIT {
 
     private static final String DEFAULT_AUTHOR_TOKEN = "AAAAAAAAAA";

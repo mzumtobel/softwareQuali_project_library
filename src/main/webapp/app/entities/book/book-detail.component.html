@@ -1,47 +1,47 @@
 <div class="row justify-content-center">
     <div class="col-8">
         <div *ngIf="book">
-            <h2><span jhiTranslate="libraryApp.book.detail.title">Book</span> {{book.id}}</h2>
+            <h2><span>Book</span> {{book.id}}</h2>
             <hr>
             <jhi-alert-error></jhi-alert-error>
             <dl class="row-md jh-entity-details">
-                <dt><span jhiTranslate="libraryApp.book.title">Title</span></dt>
+                <dt><span>Title</span></dt>
                 <dd>
                     <span>{{book.title}}</span>
                 </dd>
-                <dt><span jhiTranslate="libraryApp.book.isbn">Isbn</span></dt>
+                <dt><span>Isbn</span></dt>
                 <dd>
                     <span>{{book.isbn}}</span>
                 </dd>
-                <dt><span jhiTranslate="libraryApp.book.authorToken">Author Token</span></dt>
+                <dt><span>Author Token</span></dt>
                 <dd>
                     <span>{{book.authorToken}}</span>
                 </dd>
-                <dt><span jhiTranslate="libraryApp.book.genre">Genre</span></dt>
+                <dt><span>Genre</span></dt>
                 <dd>
-                    <span jhiTranslate="{{'libraryApp.Genre.' + book.genre}}">{{book.genre}}</span>
+                    <span>{{book.genre}}</span>
                 </dd>
-                <dt><span jhiTranslate="libraryApp.book.year">Year</span></dt>
+                <dt><span>Year</span></dt>
                 <dd>
                     <span>{{book.year}}</span>
                 </dd>
-                <dt><span jhiTranslate="libraryApp.book.rented">Rented</span></dt>
+                <dt><span>Rented</span></dt>
                 <dd>
                     <span>{{book.rented}}</span>
                 </dd>
-                <dt><span jhiTranslate="libraryApp.book.author">Author</span></dt>
+                <dt><span>Author</span></dt>
                 <dd>
                     <span *ngFor="let author of book.authors; let last = last">
                         <a [routerLink]="['/author', author?.id, 'view' ]">{{author.id}}</a>{{last ? '' : ', '}}
                     </span>
                 </dd>
-                <dt><span jhiTranslate="libraryApp.book.libraryAccount">Library Account</span></dt>
+                <dt><span>Library Account</span></dt>
                 <dd>
                     <div *ngIf="book.libraryAccount">
                         <a [routerLink]="['/library-account', book.libraryAccount?.id, 'view']">{{book.libraryAccount?.id}}</a>
                     </div>
                 </dd>
-                <dt><span jhiTranslate="libraryApp.book.rentingList">Renting List</span></dt>
+                <dt><span>Renting List</span></dt>
                 <dd>
                     <div *ngIf="book.rentingList">
                         <a [routerLink]="['/renting-list', book.rentingList?.id, 'view']">{{book.rentingList?.id}}</a>
@@ -52,13 +52,13 @@
             <button type="submit"
                     (click)="previousState()"
                     class="btn btn-info">
-                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
             </button>
 
             <button type="button"
                     [routerLink]="['/book', book.id, 'edit']"
                     class="btn btn-primary">
-                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
             </button>
         </div>
     </div>

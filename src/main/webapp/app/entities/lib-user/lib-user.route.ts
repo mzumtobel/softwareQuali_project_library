@@ -39,7 +39,7 @@ export const libUserRoute: Routes = [
     component: LibUserComponent,
     data: {
       authorities: ['ROLE_USER'],
-      pageTitle: 'libraryApp.libUser.home.title'
+      pageTitle: 'LibUsers'
     },
     canActivate: [UserRouteAccessService]
   },
@@ -51,7 +51,7 @@ export const libUserRoute: Routes = [
     },
     data: {
       authorities: ['ROLE_USER'],
-      pageTitle: 'libraryApp.libUser.home.title'
+      pageTitle: 'LibUsers'
     },
     canActivate: [UserRouteAccessService]
   },
@@ -63,7 +63,7 @@ export const libUserRoute: Routes = [
     },
     data: {
       authorities: ['ROLE_USER'],
-      pageTitle: 'libraryApp.libUser.home.title'
+      pageTitle: 'LibUsers'
     },
     canActivate: [UserRouteAccessService]
   },
@@ -75,7 +75,7 @@ export const libUserRoute: Routes = [
     },
     data: {
       authorities: ['ROLE_USER'],
-      pageTitle: 'libraryApp.libUser.home.title'
+      pageTitle: 'LibUsers'
     },
     canActivate: [UserRouteAccessService]
   }

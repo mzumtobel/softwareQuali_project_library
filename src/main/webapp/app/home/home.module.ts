@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { LibrarySharedModule } from 'app/shared/shared.module';
+import { SQuLcProjectSharedModule } from 'app/shared/shared.module';
 import { HOME_ROUTE } from './home.route';
 import { HomeComponent } from './home.component';
 
 @NgModule({
-  imports: [LibrarySharedModule, RouterModule.forChild([HOME_ROUTE])],
+  imports: [SQuLcProjectSharedModule, RouterModule.forChild([HOME_ROUTE])],
   declarations: [HomeComponent]
 })
-export class LibraryHomeModule {}
+export class SQuLcProjectHomeModule {}

@@ -53,5 +53,3 @@ relationship OneToMany{
 relationship OneToMany{
 	RentingList to Book
 }
-
-

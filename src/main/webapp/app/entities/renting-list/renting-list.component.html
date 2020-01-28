@@ -1,9 +1,9 @@
 <div>
     <h2 id="page-heading">
-        <span jhiTranslate="libraryApp.rentingList.home.title">Renting Lists</span>
+        <span>Renting Lists</span>
         <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-renting-list" [routerLink]="['/renting-list/new']">
             <fa-icon [icon]="'plus'"></fa-icon>
-            <span  jhiTranslate="libraryApp.rentingList.home.createLabel">
+            <span >
             Create a new Renting List
             </span>
         </button>
@@ -12,15 +12,15 @@
     <jhi-alert></jhi-alert>
     <br/>
     <div class="alert alert-warning" *ngIf="rentingLists?.length === 0">
-        <span jhiTranslate="libraryApp.rentingList.home.notFound">No rentingLists found</span>
+        <span>No rentingLists found</span>
     </div>
     <div class="table-responsive" *ngIf="rentingLists?.length > 0">
         <table class="table table-striped" aria-describedby="page-heading">
             <thead>
             <tr>
-            <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
-            <th scope="col" ><span jhiTranslate="libraryApp.rentingList.title">Title</span></th>
-            <th scope="col" ><span jhiTranslate="libraryApp.rentingList.description">Description</span></th>
+            <th scope="col" ><span>ID</span></th>
+            <th scope="col" ><span>Title</span></th>
+            <th scope="col" ><span>Description</span></th>
             <th scope="col"></th>
             </tr>
             </thead>
@@ -35,18 +35,18 @@
                                 [routerLink]="['/renting-list', rentingList.id, 'view' ]"
                                 class="btn btn-info btn-sm">
                             <fa-icon [icon]="'eye'"></fa-icon>
-                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            <span class="d-none d-md-inline">View</span>
                         </button>
                         <button type="submit"
                                 [routerLink]="['/renting-list', rentingList.id, 'edit']"
                                 class="btn btn-primary btn-sm">
                             <fa-icon [icon]="'pencil-alt'"></fa-icon>
-                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            <span class="d-none d-md-inline">Edit</span>
                         </button>
                         <button type="submit" (click)="delete(rentingList)"
                                 class="btn btn-danger btn-sm">
                             <fa-icon [icon]="'times'"></fa-icon>
-                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            <span class="d-none d-md-inline">Delete</span>
                         </button>
                     </div>
                 </td>

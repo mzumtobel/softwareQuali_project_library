@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Book.
+    -->
+    <changeSet id="20200128092904-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="book_id"
+                                 baseTableName="book_author"
+                                 constraintName="fk_book_author_book_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="book"/>
+
+        <addForeignKeyConstraint baseColumnNames="author_id"
+                                 baseTableName="book_author"
+                                 constraintName="fk_book_author_author_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="author"/>
+        
+        <addForeignKeyConstraint baseColumnNames="library_account_id"
+                                 baseTableName="book"
+                                 constraintName="fk_book_library_account_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="library_account"/>
+
+        <addForeignKeyConstraint baseColumnNames="renting_list_id"
+                                 baseTableName="book"
+                                 constraintName="fk_book_renting_list_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="renting_list"/>
+
+    </changeSet>
+</databaseChangeLog>

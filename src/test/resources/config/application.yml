@@ -15,10 +15,10 @@
 
 spring:
   application:
-    name: library
+    name: SQuLC_Project
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:mem:library;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:mem:SQuLC_Project;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     name:
     username:
     password:
@@ -55,13 +55,13 @@ spring:
       enabled: false
   task:
     execution:
-      thread-name-prefix: library-task-
+      thread-name-prefix: s-qu-lc-project-task-
       pool:
         core-size: 1
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: library-scheduling-
+      thread-name-prefix: s-qu-lc-project-scheduling-
       pool:
         size: 1
   thymeleaf:
@@ -79,7 +79,7 @@ server:
 
 jhipster:
   clientApp:
-    name: 'libraryApp'
+    name: 'sQuLcProjectApp'
   logging:
     # To test json console appender
     use-json-format: true # By default, logs are in Json format
@@ -95,7 +95,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-        base64-secret: ODVjMDZjYjdiOTVlY2ZmMmExYWJkMDg5YzI5Mzk1NGUyMzY1Y2Y4YmE3YTMxOTczZmQ1NTFkZDRiN2I2M2NjZGFhOGU4MGMwNGE0ZjFhZDZhZmI1ZGJjNGQzYzZjZGRhNTZmODBhODI1YWY1Nzk1NTZjMjI5M2NjYzk1ODVmZjI=
+        base64-secret: ZWUwZDQ5YjkyZDM4N2JlMDRlOGNmZGM5MDdkODBkMGZlOGM3ZDU0MjcwZWM1MTAxMDg0OWFiY2E5ZGRjY2EyZGVjZTg4ZTU4YjViNmE0ODE4MmQ1MjA0OGVkMzEzN2E0ZjM1YWI1OWMyNTZkNmQ0NTM3MWM2ODYwZGE4NGU1MDk=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
   metrics:

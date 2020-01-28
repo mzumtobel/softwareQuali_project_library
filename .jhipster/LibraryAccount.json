@@ -20,7 +20,7 @@
             "relationshipName": "book"
         }
     ],
-    "changelogDate": "20200108210904",
+    "changelogDate": "20200128092902",
     "entityTableName": "library_account",
     "dto": "no",
     "pagination": "no",

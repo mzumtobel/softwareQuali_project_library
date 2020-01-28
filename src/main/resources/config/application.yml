@@ -57,7 +57,7 @@ management:
 
 spring:
   application:
-    name: library
+    name: SQuLC_Project
   profiles:
     # The commented value for `active` can be replaced with valid Spring profiles to load.
     # Otherwise, it will be filled in by maven when building the JAR file
@@ -87,13 +87,13 @@ spring:
       enabled: false
   task:
     execution:
-      thread-name-prefix: library-task-
+      thread-name-prefix: s-qu-lc-project-task-
       pool:
         core-size: 2
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: library-scheduling-
+      thread-name-prefix: s-qu-lc-project-scheduling-
       pool:
         size: 2
   thymeleaf:
@@ -121,7 +121,7 @@ info:
 
 jhipster:
   clientApp:
-    name: 'libraryApp'
+    name: 'sQuLcProjectApp'
   # By default CORS is disabled. Uncomment to enable.
   # cors:
   #     allowed-origins: "*"
@@ -131,11 +131,11 @@ jhipster:
   #     allow-credentials: true
   #     max-age: 1800
   mail:
-    from: library@localhost
+    from: SQuLC_Project@localhost
   swagger:
     default-include-pattern: /api/.*
-    title: library API
-    description: library API documentation
+    title: SQuLC_Project API
+    description: SQuLC_Project API documentation
     version: 0.0.1
     terms-of-service-url:
     contact-name:

@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 
-import { LibraryTestModule } from '../../../test.module';
+import { SQuLcProjectTestModule } from '../../../test.module';
 import { LibraryAccountDetailComponent } from 'app/entities/library-account/library-account-detail.component';
 import { LibraryAccount } from 'app/shared/model/library-account.model';
 
@@ -14,7 +14,7 @@ describe('Component Tests', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [LibraryTestModule],
+        imports: [SQuLcProjectTestModule],
         declarations: [LibraryAccountDetailComponent],
         providers: [{ provide: ActivatedRoute, useValue: route }]
       })

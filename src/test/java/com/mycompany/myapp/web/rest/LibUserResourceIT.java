@@ -1,6 +1,6 @@
 package com.mycompany.myapp.web.rest;
 
-import com.mycompany.myapp.LibraryApp;
+import com.mycompany.myapp.SQuLcProjectApp;
 import com.mycompany.myapp.domain.LibUser;
 import com.mycompany.myapp.repository.LibUserRepository;
 import com.mycompany.myapp.web.rest.errors.ExceptionTranslator;
@@ -30,7 +30,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Integration tests for the {@link LibUserResource} REST controller.
  */
-@SpringBootTest(classes = LibraryApp.class)
+@SpringBootTest(classes = SQuLcProjectApp.class)
 public class LibUserResourceIT {
 
     private static final String DEFAULT_USERNAME = "AAAAAAAAAA";

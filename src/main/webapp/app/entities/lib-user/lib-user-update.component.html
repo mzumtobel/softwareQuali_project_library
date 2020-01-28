@@ -1,44 +1,44 @@
 <div class="row justify-content-center">
     <div class="col-8">
         <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
-            <h2 id="jhi-lib-user-heading" jhiTranslate="libraryApp.libUser.home.createOrEditLabel">Create or edit a Lib User</h2>
+            <h2 id="jhi-lib-user-heading">Create or edit a Lib User</h2>
             <div>
                 <jhi-alert-error></jhi-alert-error>
                 <div class="form-group" [hidden]="!editForm.get('id')!.value">
-                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <label for="id">ID</label>
                     <input type="text" class="form-control" id="id" name="id" formControlName="id"
                         readonly />
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="libraryApp.libUser.username" for="field_username">Username</label>
+                    <label class="form-control-label" for="field_username">Username</label>
                     <input type="text" class="form-control" name="username" id="field_username"
                            formControlName="username"/>
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="libraryApp.libUser.firstName" for="field_firstName">First Name</label>
+                    <label class="form-control-label" for="field_firstName">First Name</label>
                     <input type="text" class="form-control" name="firstName" id="field_firstName"
                            formControlName="firstName"/>
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="libraryApp.libUser.lastName" for="field_lastName">Last Name</label>
+                    <label class="form-control-label" for="field_lastName">Last Name</label>
                     <input type="text" class="form-control" name="lastName" id="field_lastName"
                            formControlName="lastName"/>
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="libraryApp.libUser.email" for="field_email">Email</label>
+                    <label class="form-control-label" for="field_email">Email</label>
                     <input type="text" class="form-control" name="email" id="field_email"
                            formControlName="email"/>
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="libraryApp.libUser.rentingList" for="field_rentingList">Renting List</label>
+                    <label class="form-control-label" for="field_rentingList">Renting List</label>
                     <select class="form-control" id="field_rentingList" name="rentingList" formControlName="rentingList">
                         <option [ngValue]="null"></option>
                         <option [ngValue]="rentingListOption.id === editForm.get('rentingList')!.value?.id ? editForm.get('rentingList')!.value : rentingListOption" *ngFor="let rentingListOption of rentinglists; trackBy: trackById">{{rentingListOption.id}}</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="libraryApp.libUser.libraryAccount" for="field_libraryAccount">Library Account</label>
+                    <label class="form-control-label" for="field_libraryAccount">Library Account</label>
                     <select class="form-control" id="field_libraryAccount" name="libraryAccount" formControlName="libraryAccount">
                         <option [ngValue]="null"></option>
                         <option [ngValue]="libraryAccountOption.id === editForm.get('libraryAccount')!.value?.id ? editForm.get('libraryAccount')!.value : libraryAccountOption" *ngFor="let libraryAccountOption of libraryaccounts; trackBy: trackById">{{libraryAccountOption.id}}</option>
@@ -47,10 +47,10 @@
             </div>
             <div>
                 <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
-                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
                 </button>
                 <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
-                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
                 </button>
             </div>
         </form>

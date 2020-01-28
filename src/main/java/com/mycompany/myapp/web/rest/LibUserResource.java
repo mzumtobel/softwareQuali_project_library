@@ -55,7 +55,7 @@ public class LibUserResource {
         }
         LibUser result = libUserRepository.save(libUser);
         return ResponseEntity.created(new URI("/api/lib-users/" + result.getId()))
-            .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.getId().toString()))
+            .headers(HeaderUtil.createEntityCreationAlert(applicationName, false, ENTITY_NAME, result.getId().toString()))
             .body(result);
     }
 
@@ -76,7 +76,7 @@ public class LibUserResource {
         }
         LibUser result = libUserRepository.save(libUser);
         return ResponseEntity.ok()
-            .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, libUser.getId().toString()))
+            .headers(HeaderUtil.createEntityUpdateAlert(applicationName, false, ENTITY_NAME, libUser.getId().toString()))
             .body(result);
     }
 
@@ -115,6 +115,6 @@ public class LibUserResource {
     public ResponseEntity<Void> deleteLibUser(@PathVariable Long id) {
         log.debug("REST request to delete LibUser : {}", id);
         libUserRepository.deleteById(id);
-        return ResponseEntity.noContent().headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString())).build();
+        return ResponseEntity.noContent().headers(HeaderUtil.createEntityDeletionAlert(applicationName, false, ENTITY_NAME, id.toString())).build();
     }
 }

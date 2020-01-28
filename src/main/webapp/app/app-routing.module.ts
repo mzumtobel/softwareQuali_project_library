@@ -31,4 +31,4 @@ const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
   ],
   exports: [RouterModule]
 })
-export class LibraryAppRoutingModule {}
+export class SQuLcProjectAppRoutingModule {}

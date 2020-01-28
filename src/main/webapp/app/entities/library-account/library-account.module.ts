@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { LibrarySharedModule } from 'app/shared/shared.module';
+import { SQuLcProjectSharedModule } from 'app/shared/shared.module';
 import { LibraryAccountComponent } from './library-account.component';
 import { LibraryAccountDetailComponent } from './library-account-detail.component';
 import { LibraryAccountUpdateComponent } from './library-account-update.component';
@@ -9,7 +9,7 @@ import { LibraryAccountDeleteDialogComponent } from './library-account-delete-di
 import { libraryAccountRoute } from './library-account.route';
 
 @NgModule({
-  imports: [LibrarySharedModule, RouterModule.forChild(libraryAccountRoute)],
+  imports: [SQuLcProjectSharedModule, RouterModule.forChild(libraryAccountRoute)],
   declarations: [
     LibraryAccountComponent,
     LibraryAccountDetailComponent,
@@ -18,4 +18,4 @@ import { libraryAccountRoute } from './library-account.route';
   ],
   entryComponents: [LibraryAccountDeleteDialogComponent]
 })
-export class LibraryLibraryAccountModule {}
+export class SQuLcProjectLibraryAccountModule {}

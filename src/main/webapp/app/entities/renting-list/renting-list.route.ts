@@ -39,7 +39,7 @@ export const rentingListRoute: Routes = [
     component: RentingListComponent,
     data: {
       authorities: ['ROLE_USER'],
-      pageTitle: 'libraryApp.rentingList.home.title'
+      pageTitle: 'RentingLists'
     },
     canActivate: [UserRouteAccessService]
   },
@@ -51,7 +51,7 @@ export const rentingListRoute: Routes = [
     },
     data: {
       authorities: ['ROLE_USER'],
-      pageTitle: 'libraryApp.rentingList.home.title'
+      pageTitle: 'RentingLists'
     },
     canActivate: [UserRouteAccessService]
   },
@@ -63,7 +63,7 @@ export const rentingListRoute: Routes = [
     },
     data: {
       authorities: ['ROLE_USER'],
-      pageTitle: 'libraryApp.rentingList.home.title'
+      pageTitle: 'RentingLists'
     },
     canActivate: [UserRouteAccessService]
   },
@@ -75,7 +75,7 @@ export const rentingListRoute: Routes = [
     },
     data: {
       authorities: ['ROLE_USER'],
-      pageTitle: 'libraryApp.rentingList.home.title'
+      pageTitle: 'RentingLists'
     },
     canActivate: [UserRouteAccessService]
   }

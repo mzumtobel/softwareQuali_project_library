@@ -6,26 +6,26 @@ import { RouterModule } from '@angular/router';
     RouterModule.forChild([
       {
         path: 'library-account',
-        loadChildren: () => import('./library-account/library-account.module').then(m => m.LibraryLibraryAccountModule)
+        loadChildren: () => import('./library-account/library-account.module').then(m => m.SQuLcProjectLibraryAccountModule)
       },
       {
         path: 'lib-user',
-        loadChildren: () => import('./lib-user/lib-user.module').then(m => m.LibraryLibUserModule)
+        loadChildren: () => import('./lib-user/lib-user.module').then(m => m.SQuLcProjectLibUserModule)
       },
       {
         path: 'book',
-        loadChildren: () => import('./book/book.module').then(m => m.LibraryBookModule)
+        loadChildren: () => import('./book/book.module').then(m => m.SQuLcProjectBookModule)
       },
       {
         path: 'author',
-        loadChildren: () => import('./author/author.module').then(m => m.LibraryAuthorModule)
+        loadChildren: () => import('./author/author.module').then(m => m.SQuLcProjectAuthorModule)
       },
       {
         path: 'renting-list',
-        loadChildren: () => import('./renting-list/renting-list.module').then(m => m.LibraryRentingListModule)
+        loadChildren: () => import('./renting-list/renting-list.module').then(m => m.SQuLcProjectRentingListModule)
       }
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ])
   ]
 })
-export class LibraryEntityModule {}
+export class SQuLcProjectEntityModule {}

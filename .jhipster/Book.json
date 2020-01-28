@@ -51,7 +51,7 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20200108210906",
+    "changelogDate": "20200128092904",
     "entityTableName": "book",
     "dto": "no",
     "pagination": "no",

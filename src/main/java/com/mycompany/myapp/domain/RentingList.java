@@ -1,7 +1,5 @@
 package com.mycompany.myapp.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 
@@ -14,7 +12,6 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "renting_list")
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class RentingList implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -30,7 +27,6 @@ public class RentingList implements Serializable {
     private String description;
 
     @OneToMany(mappedBy = "rentingList")
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Book> books = new HashSet<>();
 
     @OneToOne(mappedBy = "rentingList")

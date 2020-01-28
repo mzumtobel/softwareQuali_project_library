@@ -14,16 +14,13 @@ export class NotificationInterceptor implements HttpInterceptor {
         if (event instanceof HttpResponse) {
           const arr = event.headers.keys();
           let alert: string | null = null;
-          let alertParams: string | null = null;
           arr.forEach(entry => {
             if (entry.toLowerCase().endsWith('app-alert')) {
               alert = event.headers.get(entry);
-            } else if (entry.toLowerCase().endsWith('app-params')) {
-              alertParams = decodeURIComponent(event.headers.get(entry)!.replace(/\+/g, ' '));
             }
           });
           if (alert) {
-            this.alertService.success(alert, { param: alertParams });
+            this.alertService.success(alert);
           }
         }
       })

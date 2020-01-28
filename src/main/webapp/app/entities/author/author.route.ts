@@ -39,7 +39,7 @@ export const authorRoute: Routes = [
     component: AuthorComponent,
     data: {
       authorities: ['ROLE_USER'],
-      pageTitle: 'libraryApp.author.home.title'
+      pageTitle: 'Authors'
     },
     canActivate: [UserRouteAccessService]
   },
@@ -51,7 +51,7 @@ export const authorRoute: Routes = [
     },
     data: {
       authorities: ['ROLE_USER'],
-      pageTitle: 'libraryApp.author.home.title'
+      pageTitle: 'Authors'
     },
     canActivate: [UserRouteAccessService]
   },
@@ -63,7 +63,7 @@ export const authorRoute: Routes = [
     },
     data: {
       authorities: ['ROLE_USER'],
-      pageTitle: 'libraryApp.author.home.title'
+      pageTitle: 'Authors'
     },
     canActivate: [UserRouteAccessService]
   },
@@ -75,7 +75,7 @@ export const authorRoute: Routes = [
     },
     data: {
       authorities: ['ROLE_USER'],
-      pageTitle: 'libraryApp.author.home.title'
+      pageTitle: 'Authors'
     },
     canActivate: [UserRouteAccessService]
   }

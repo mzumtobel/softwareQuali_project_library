@@ -1,16 +1,16 @@
 version: '2'
 services:
-  library-app:
-    image: library
+  squlc_project-app:
+    image: squlc_project
     environment:
       - _JAVA_OPTIONS=-Xmx512m -Xms256m
       - SPRING_PROFILES_ACTIVE=prod,swagger
       - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
-      - SPRING_DATASOURCE_URL=jdbc:mysql://library-mysql:3306/library?useUnicode=true&characterEncoding=utf8&useSSL=false&createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_URL=jdbc:mysql://squlc_project-mysql:3306/squlc_project?useUnicode=true&characterEncoding=utf8&useSSL=false&createDatabaseIfNotExist=true
       - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
     ports:
       - 8080:8080
-  library-mysql:
+  squlc_project-mysql:
     extends:
       file: mysql.yml
-      service: library-mysql
+      service: squlc_project-mysql

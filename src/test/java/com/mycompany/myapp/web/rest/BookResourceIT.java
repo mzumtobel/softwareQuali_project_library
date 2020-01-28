@@ -1,6 +1,6 @@
 package com.mycompany.myapp.web.rest;
 
-import com.mycompany.myapp.LibraryApp;
+import com.mycompany.myapp.SQuLcProjectApp;
 import com.mycompany.myapp.domain.Book;
 import com.mycompany.myapp.repository.BookRepository;
 import com.mycompany.myapp.web.rest.errors.ExceptionTranslator;
@@ -36,7 +36,7 @@ import com.mycompany.myapp.domain.enumeration.Genre;
 /**
  * Integration tests for the {@link BookResource} REST controller.
  */
-@SpringBootTest(classes = LibraryApp.class)
+@SpringBootTest(classes = SQuLcProjectApp.class)
 public class BookResourceIT {
 
     private static final String DEFAULT_TITLE = "AAAAAAAAAA";

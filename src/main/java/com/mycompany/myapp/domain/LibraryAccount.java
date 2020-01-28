@@ -1,6 +1,4 @@
 package com.mycompany.myapp.domain;
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 
@@ -13,7 +11,6 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "library_account")
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class LibraryAccount implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -26,11 +23,9 @@ public class LibraryAccount implements Serializable {
     private String name;
 
     @OneToMany(mappedBy = "libraryAccount")
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<LibUser> libUsers = new HashSet<>();
 
     @OneToMany(mappedBy = "libraryAccount")
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Book> books = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove

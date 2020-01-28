@@ -3,7 +3,7 @@ import { HttpResponse } from '@angular/common/http';
 import { FormBuilder } from '@angular/forms';
 import { of } from 'rxjs';
 
-import { LibraryTestModule } from '../../../test.module';
+import { SQuLcProjectTestModule } from '../../../test.module';
 import { AuthorUpdateComponent } from 'app/entities/author/author-update.component';
 import { AuthorService } from 'app/entities/author/author.service';
 import { Author } from 'app/shared/model/author.model';
@@ -16,7 +16,7 @@ describe('Component Tests', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [LibraryTestModule],
+        imports: [SQuLcProjectTestModule],
         declarations: [AuthorUpdateComponent],
         providers: [FormBuilder]
       })
